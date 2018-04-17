@@ -1,6 +1,5 @@
 // actions will dictate how your state changes by passing in information to the reducer
 
-// addtodo, resetlist, togglecompleted,
 
 const ADD_TODO = 'ADD_TODO';
 export const addTodo = (text) => ({

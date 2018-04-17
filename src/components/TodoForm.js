@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { addTodo, todoInput } from '../actions';
 
-const AddTodo = (props) => (
+const TodoForm = (props) => (
   <form onSubmit={(e) => {
 
     e.preventDefault();
@@ -16,7 +16,7 @@ const AddTodo = (props) => (
     const emptyInput = '';
     props.dispatch(todoInput(emptyInput));
 
-    
+
 
 
   }}>
@@ -33,5 +33,5 @@ const mapStatetoProps = (state) => ({
   todos: state.todos.newTodo
 });
 
-export default connect(mapStatetoProps)(AddTodo);
+export default connect(mapStatetoProps)(TodoForm);
 // connected component to redux which gives us access to dispatch function

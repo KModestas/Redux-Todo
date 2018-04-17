@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
-import AddTodo from './components/AddTodo';
+import TodoForm from './components/TodoForm';
 import List from './components/List';
 import ResetList from './components/ResetList';
 import Heading from './components/Heading';
@@ -10,7 +9,7 @@ class App extends Component {
     return (
       <div className="App">
         <Heading />
-        <AddTodo />
+        <TodoForm />
         <ResetList />
         <List />
       </div>
