@@ -4,7 +4,7 @@ import { resetList } from '../actions';
 
 
 const ResetList = (props) => (
-  <button onClick={() => props.dispatch(resetList())}>Reset</button>
+  <button className="reset" onClick={() => props.dispatch(resetList())}>Reset</button>
 );
 
 

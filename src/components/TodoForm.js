@@ -24,7 +24,7 @@ const TodoForm = (props) => (
       props.dispatch(todoInput(e.target.value));
     }}
     placeholder="I need to.." type="text" name="userInput" value={props.todos} />
-    <button disabled={!props.todos}>Add Todo</button>
+    <button disabled={!props.todos} className="add">Add Todo</button>
   </form>
 );
 
