@@ -9,6 +9,12 @@ export const addTodo = (text) => ({
   id: Math.random()
 });
 
+const TODO_INPUT = 'TODO_INPUT';
+export const todoInput = (inputValue) => ({
+  type: TODO_INPUT,
+  input: inputValue
+});
+
 const DELETE_TODO = 'DELETE_TODO';
 export const deleteTodo = (id) => ({
   type: DELETE_TODO,
@@ -19,8 +25,9 @@ const RESET_LIST = 'RESET_LIST'; //
 export const resetList = () => ({
   type: RESET_LIST
 });
-//
-// const TOGGLE_COMPLETED = 'TOGGLE_COMPLETED';
-// export const toggleCompleted = () => ({
-//   type: TOGGLE_COMPLETED
-// });
+
+const TOGGLE_COMPLETED = 'TOGGLE_COMPLETED';
+export const toggleCompleted = (index) => ({
+  type: TOGGLE_COMPLETED,
+  index
+});

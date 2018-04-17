@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { addTodo } from '../actions';
+import { addTodo, todoInput } from '../actions';
 
 const AddTodo = (props) => (
   <form onSubmit={(e) => {
@@ -10,12 +10,24 @@ const AddTodo = (props) => (
     const input = e.target.userInput.value;
     props.dispatch(addTodo(input));
 
-    e.target.userInput.value = '';
+    // makes value empty when submitting todo which disbales addtodo button
+    const emptyInput = '';
+    props.dispatch(todoInput(emptyInput));
+
+
   }}>
-    <input placeholder="I need to.." type="text" name="userInput" />
-    <button>Add  Todo</button>
+    <input onChange={(e)=> {
+      props.dispatch(todoInput(e.target.value));
+    }}
+    placeholder="I need to.." type="text" name="userInput" value={props.todos} />
+    <button disabled={!props.todos}>Add Todo</button>
   </form>
 );
 
-export default connect()(AddTodo);
+
+const mapStatetoProps = (state) => ({
+  todos: state.todos.newTodo
+});
+
+export default connect(mapStatetoProps)(AddTodo);
 // connected component to redux which gives us access to dispatch function

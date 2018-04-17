@@ -1,5 +1,6 @@
 const initialState = {
-  data: []
+  data: [{completed: false}],
+  newTodo: ''
 };
 
 const todos = (state = initialState, action) => {
@@ -15,7 +16,14 @@ const todos = (state = initialState, action) => {
       };
     }
 
-    case 'DELETE_TODO': { // wrap each block in curlies
+    case 'TODO_INPUT': { // wrap each block in curlies
+      return {
+        ...state,
+        newTodo: action.input
+      };
+    }
+
+    case 'DELETE_TODO': {
       const todos = state.data.filter(todo => todo.id !== action.id);
       return {
         ...state,
@@ -27,6 +35,17 @@ const todos = (state = initialState, action) => {
       return {
         ...state,
         data: []
+      };
+    }
+
+    case 'TOGGLE_COMPLETED': {
+      const todos = state.data.map((todo, i) => {
+        if (i === action.index) todo.completed = !todo.completed;
+        return todo;
+      });
+      return {
+        ...state,
+        data: todos
       };
     }
 
