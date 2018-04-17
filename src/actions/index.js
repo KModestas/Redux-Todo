@@ -15,10 +15,10 @@ export const deleteTodo = (id) => ({
   id
 });
 
-// const RESET_LIST = 'RESET_LIST'; //
-// export const resetList = () => {
-//   type: RESET_LIST
-// };
+const RESET_LIST = 'RESET_LIST'; //
+export const resetList = () => {
+  type: RESET_LIST;
+};
 //
 // const TOGGLE_COMPLETED = 'TOGGLE_COMPLETED';
 // export const toggleCompleted = () => ({
