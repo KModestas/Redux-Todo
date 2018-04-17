@@ -1,4 +1,4 @@
-# React Todo App
+# React / Redux Todo App
 
 <h2>What is React / Redux Todo App?</h2>
 This is a simple Front end Todo List app that I built using React and Redux. The main reason for this application was to revise many of the fundamental concepts of React such as setting state, passing props and rendering components as well as to begin familiarising myself with the popular Redux library.
