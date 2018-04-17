@@ -11,6 +11,7 @@ const Heading = (props) => (
   </div>
 );
 
+// need to grab data from the global state so mapsStatetoProps is used which i can then use to filter over todos and display the number of active todos above.
 const mapStatetoProps = (state) => ({
   todos: state.todos.data
 });

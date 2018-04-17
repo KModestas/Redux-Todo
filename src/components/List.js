@@ -24,6 +24,3 @@ const mapStatetoProps = (state) => ({
 });
 
 export default connect(mapStatetoProps)(List);
-
-
-// togglecompleted functionality goes in here

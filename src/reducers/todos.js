@@ -3,6 +3,8 @@ const initialState = {
   newTodo: ''
 };
 
+// this is where dispatched actions are handled. If the type matches one of the cases, that particuar code block will run and the state will be updated accrodingly which will re-render the entire app and update the views.
+
 const todos = (state = initialState, action) => {
 
   switch(action.type) {
