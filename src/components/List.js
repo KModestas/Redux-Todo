@@ -5,9 +5,13 @@ import { deleteTodo, toggleCompleted } from '../actions';
 const List = (props) => (
   <ol>
     {props.todos.map((todo, i) => (
-      <li key={i} onClick={()=> {
-        props.dispatch(toggleCompleted(i));
-      }}>
+      <li
+        key={i}
+        onClick={()=> {
+          props.dispatch(toggleCompleted(i));
+        }}
+        className={ todo.completed ? 'completed' : '' }
+      >
         {todo.text}
         <button onClick={()=> props.dispatch(deleteTodo(todo.id))}>X</button>
       </li>
