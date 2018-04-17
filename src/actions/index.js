@@ -16,9 +16,9 @@ export const deleteTodo = (id) => ({
 });
 
 const RESET_LIST = 'RESET_LIST'; //
-export const resetList = () => {
-  type: RESET_LIST;
-};
+export const resetList = () => ({
+  type: RESET_LIST
+});
 //
 // const TOGGLE_COMPLETED = 'TOGGLE_COMPLETED';
 // export const toggleCompleted = () => ({

@@ -23,6 +23,13 @@ const todos = (state = initialState, action) => {
       };
     }
 
+    case 'RESET_LIST': {
+      return {
+        ...state,
+        data: []
+      };
+    }
+
     default:
       return state;
   }

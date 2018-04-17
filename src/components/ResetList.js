@@ -3,8 +3,10 @@ import { connect } from 'react-redux';
 import { resetList } from '../actions';
 
 
-const ResetList = () => (
-  <button>Reset</button>
+const ResetList = (props) => (
+  <button onClick={() => props.dispatch(resetList())}>Reset</button>
 );
 
-export default ResetList;
+
+
+export default connect()(ResetList);
