@@ -23,7 +23,7 @@ Simply type in a Todo list item that you want to add in the input field and pres
 Building this app allowed me to revisit and familiarise myself with the core concepts of react and redux. I also like the simplistic yet stylish design I was able to accomplish.
 
 <h2>Challenges</h2>
-Seen as this was my first redux app, it was quite hard to grasp al of the concepts, though as I began to build out my app, I saw alot of patterns which became easier to pick up on. I feel as though Redux has alot of boilerplate, but once you get passed it, the concepts make sense.
+Seen as this was my first redux app, it was quite hard to grasp all of the concepts, though as I began to build out my app, I saw alot of patterns which became easier to pick up on. I feel as though Redux has alot of boilerplate, but once you get passed it, the concepts make sense.
 
 <h2>Future Improvements</h2>
 To improve this app further, It would cool If I could make it so that you can rearrange the order of the todo list items by clicking an 'up' or 'down' arrow.
