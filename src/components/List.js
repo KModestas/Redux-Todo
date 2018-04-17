@@ -13,7 +13,7 @@ const List = (props) => (
         className={ todo.completed ? 'completed' : '' }
       >
         {todo.text}
-        <button onClick={()=> props.dispatch(deleteTodo(todo.id))}>X</button>
+        <button className="remove" onClick={()=> props.dispatch(deleteTodo(todo.id))}>X</button>
       </li>
     ))}
   </ol>
