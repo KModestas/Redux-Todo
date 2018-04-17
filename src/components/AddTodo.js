@@ -16,6 +16,8 @@ const AddTodo = (props) => (
     const emptyInput = '';
     props.dispatch(todoInput(emptyInput));
 
+    
+
 
   }}>
     <input onChange={(e)=> {
