@@ -27,7 +27,8 @@ export const resetList = () => ({
 });
 
 const TOGGLE_COMPLETED = 'TOGGLE_COMPLETED';
-export const toggleCompleted = (index) => ({
+export const toggleCompleted = (index, completed) => ({
   type: TOGGLE_COMPLETED,
-  index
+  index,
+  completed
 });

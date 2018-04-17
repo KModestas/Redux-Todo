@@ -1,5 +1,5 @@
 const initialState = {
-  data: [{completed: false}],
+  data: [],
   newTodo: ''
 };
 
@@ -11,7 +11,8 @@ const todos = (state = initialState, action) => {
         ...state,
         data: [...state.data, {
           text: action.text,
-          id: action.id
+          id: action.id,
+          completed: action.completed
         }]
       };
     }

@@ -8,7 +8,9 @@ const AddTodo = (props) => (
     e.preventDefault();
 
     const input = e.target.userInput.value;
-    props.dispatch(addTodo(input));
+    const completed = false;
+
+    props.dispatch(addTodo(input, completed));
 
     // makes value empty when submitting todo which disbales addtodo button
     const emptyInput = '';
